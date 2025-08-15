@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/webhook/actionCompleted', (req, res) => {
+app.post('/', (req, res) => {
   console.log('收到 Webhook:', req.body);
   res.sendStatus(200);
 });
